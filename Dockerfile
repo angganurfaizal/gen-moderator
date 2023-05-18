@@ -24,7 +24,7 @@ RUN echo "✅ Build for Linux"; make build
 
 # Distribution
 FROM ubuntu:20.04 as runner
-RUN apt-get -y update && apt upgrade -y
+RUN apt-get -y update --fix-missing && apt upgrade -y
 RUN apt-get -y install  software-properties-common && \
     apt-get -y install wget && \
     DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
