@@ -52,7 +52,7 @@ jobs:
           context: .
           file: ${{env.DOCKERFILE_NAME}}
           push: true
-          tags: |
+          run: |
             ${{env.DOCKER_REGISTRY}}/${{env.DOCKER_IMAGE_NAME}}:latest
             ${{env.DOCKER_REGISTRY}}/${{env.DOCKER_IMAGE_NAME}}:${{ env.IMAGE_TAG }}
           cache-from: type=gha
