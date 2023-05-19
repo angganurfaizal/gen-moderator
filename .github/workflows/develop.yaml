@@ -53,7 +53,4 @@ jobs:
           docker tag $DOCKER_IMAGE_NAME:latest gcr.io/$DOCKER_IMAGE_NAME:${{ env.IMAGE_TAG }}
           docker push gcr.io/$DOCKER_IMAGE_NAME:latest
           docker push gcr.io/$DOCKER_IMAGE_NAME:${{ env.IMAGE_TAG }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          build-args: ENV=${{ env.BUILD_ENV }}
-  
+      
