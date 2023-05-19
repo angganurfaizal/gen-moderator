@@ -9,8 +9,8 @@ on:
       - "develop_ai_school"
 
 env:
-  DOCKER_REGISTRY: gcr.io
-  DOCKER_IMAGE_NAME: generative-365207/generative-moderator
+  DOCKER_REGISTRY: asia-docker.pkg.dev
+  DOCKER_IMAGE_NAME: flowing-scholar-387113/gen-moderator
   DOCKERFILE_NAME: Dockerfile
 
 jobs:
