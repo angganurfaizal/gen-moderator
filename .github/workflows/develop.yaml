@@ -48,11 +48,12 @@ jobs:
           gcloud auth configure-docker --quiet gcr.io
 
       - name: Build and push
+        uses: docker/build-push-action@v4
         with:
           context: .
           file: ${{env.DOCKERFILE_NAME}}
           push: true
-          run: |
+          tags: |
             ${{env.DOCKER_REGISTRY}}/${{env.DOCKER_IMAGE_NAME}}:latest
             ${{env.DOCKER_REGISTRY}}/${{env.DOCKER_IMAGE_NAME}}:${{ env.IMAGE_TAG }}
           cache-from: type=gha
