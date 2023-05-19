@@ -45,7 +45,8 @@ jobs:
 
       - name: Authenticate docker
         run: |
-          gcloud auth configure-docker --quiet gcr.io
+          gcloud auth configure-docker \
+          asia-docker.pkg.dev
 
       - name: Build and push
         uses: docker/build-push-action@v4
