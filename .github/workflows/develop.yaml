@@ -9,8 +9,8 @@ on:
       - "develop_ai_school"
 
 env:
-  DOCKER_REGISTRY: asia-docker.pkg.dev
-  DOCKER_IMAGE_NAME: flowing-scholar-387113/gen-moderator
+  DOCKER_REGISTRY: gcr.io
+  DOCKER_IMAGE_NAME: generative-365207/generative-moderator
   DOCKERFILE_NAME: Dockerfile
 
 jobs:
@@ -45,7 +45,7 @@ jobs:
 
       - name: Authenticate docker
         run: |
-          gcloud auth configure-docker --quiet
+          gcloud auth configure-docker --quiet gcr.io
 
       - name: Build and push
         with:
