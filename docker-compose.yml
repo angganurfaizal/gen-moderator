@@ -1,19 +1,19 @@
 version: "3.8"
 services:
-  # api_service:
-  #   restart: always
-  #   container_name: api_service
-  #   build:
-  #     dockerfile: ./Dockerfile
-  #   ports:
-  #     - "8003:${SERVICE_PORT}"
-  #   entrypoint:
-  #     - ./backend-api
-  #   command:
-  #     - server
-  #   working_dir: /app
-  #   env_file:
-  #     - .env.docker
+  api_service:
+    restart: always
+    container_name: api_service
+    build:
+      dockerfile: ./Dockerfile
+    ports:
+      - "8003:${SERVICE_PORT}"
+    entrypoint:
+      - ./backend-api
+    command:
+      - server
+    working_dir: /app
+    env_file:
+      - .env.docker
       
   api_redis_service:
     restart: always

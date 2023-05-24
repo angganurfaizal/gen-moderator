@@ -10,7 +10,7 @@ on:
 
 env:
   DOCKER_REGISTRY: gcr.io
-  DOCKER_IMAGE_NAME: generative-365207/generative-moderator
+  DOCKER_IMAGE_NAME: generative-moderator/generative-xyz-moderator
   DOCKERFILE_NAME: Dockerfile
 
 jobs:
